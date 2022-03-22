@@ -1,3 +1,17 @@
-// JWT
 const TOKEN =
-  "39cbf369406a465905a061e8cab0c17e27e67a377e3251534f9e9ae5f2edc2149cdb5cd06ca9e05194877422ff629ac6651e5fb79d52ac6300572b1145ca5f7caf605b01eaf394d3fbc10f3068303012defb4e90b4480db1e61072a277cc00ef838163fa620dabf17e9a89bf781bc9287dd38e010bf55d7f66ad73ca533a81e4";
+  "a1abbcd3415a46cb1eec14ea46f4b1d6ab200c5284fcf23054ec9cec7e87ad4cd1fd413c4cc45fe8053ee05c7c1ce8caca716eb0b498d07b9959952c5dce33b7fe1a263bb96acc7b7d05bf18e946d8a8d81fbb00e48c34c53fcaac37a4a15c07b9965b0551c79b3dc0cc525692ef2232fd684d64e2c6554a8e58269537c1b5f4";
+
+export const BASE_URL =
+  "https://limitless-brushlands-46213.herokuapp.com/api/students";
+
+export function HEADER(meth, data) {
+  return {
+    method: meth,
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + TOKEN,
+    },
+    body: JSON.stringify(data),
+  };
+}
