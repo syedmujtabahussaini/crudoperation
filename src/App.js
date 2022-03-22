@@ -20,7 +20,7 @@ function App() {
     })
       .then((response) => response.json())
       .then((data) => setShowData(data));
-  }, [flag]);
+  }, []);
 
   console.log(showData);
   const changeTxt = () => {
